@@ -46,4 +46,3 @@ if(!$db = mysql_connect($dbhost, $dbuser, $dbpasswd)){
 if(!mysql_select_db($dbname,$db)){
 	echo '<strong style="color:red;">Error 1: Cannot Connect to Database Table.</strong><br />Check Database Connection Settings in : includes/config.php'; exit;
 }
-?>

@@ -45,7 +45,7 @@ include_once('includes/globals.php');
             </div>
             <div class="AdHeader">
             <?php 
-			if($UserData['Admin']){
+			if(isset($UserData['Admin']) && $UserData['Admin'] == true){
 				echo 'Admin Pages: ';
 				$sql = "SELECT * FROM ".$db_prefix."pages WHERE page_level > 2 ORDER BY page_name ASC ";
 				$result = mysql_query($sql ,$db);

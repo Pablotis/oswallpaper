@@ -17,7 +17,7 @@
                     <span class="ct"><span class="cl"></span></span>
                     <div class="RightBoxi">
                     	<div class="Banner120x600"><?php
-						if($UserData['Admin']){
+						if(isset($UserData['Admin']) && $UserData['Admin'] == true){
 							echo 'No Adsense When Logged In As Admin to preven clicks by mistake';
 						}else{
 							echo Adsense(2); 
