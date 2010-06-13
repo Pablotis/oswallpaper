@@ -12,7 +12,7 @@ if(isset($_POST['Login'])){
 		$_SESSION['attempts'] ++;
 		LoginForm('*All Fields Are Required');
 	}else{
-		if($_SESSION['username'] && $_SESSION['password']){
+		if(!empty($_SESSION['username']) && !empty($_SESSION['password'])){
 			$_SESSION['attempts'] ++;
 			echo refer($Gbl['SiteUrl'],$Gbl['ErrorTime'],'You are already logged in. 2');
 		}else{
@@ -32,7 +32,7 @@ if(isset($_POST['Login'])){
 		}
 	}
 }else{
-	if($_SESSION['username'] && $_SESSION['password']) {
+	if(!empty($_SESSION['username']) && !empty($_SESSION['password'])) {
 		$_SESSION['attempts'] ++;
 		echo refer($Gbl['SiteUrl'],$Gbl['ErrorTime'],'You are already logged in. 1');
 	}else{

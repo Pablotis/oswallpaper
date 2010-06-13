@@ -44,7 +44,7 @@ echo'
 <div class="IndexCommentsLatest">Lates Comments</div>
 
 <?php 
-							$sql = "SELECT name,comments FROM ".$db_prefix."comments WHERE status = 1 ORDER BY id DESC LIMIT 0,10";
+							$sql = "SELECT name,time,comments FROM ".$db_prefix."comments WHERE status = 1 ORDER BY id DESC LIMIT 0,10";
 							$dbResult = mysql_query($sql, $db);
 							while($myrow = mysql_fetch_array($dbResult, MYSQL_ASSOC)){
 								echo '<div class="IndexCommentsName">By: '.$myrow['name'].'</div>';

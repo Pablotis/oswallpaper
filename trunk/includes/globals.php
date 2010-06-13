@@ -1,11 +1,11 @@
 <?php
 /**
 *
-* @package wallpaperscript_beta
+* @package oswallpaper
 * @copyright (c) 2009 wallpaperscript.org
 * In Collaboration with: www.webune.com & www.wallpaperama.com
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
-*
+* 
 */
 
 
@@ -18,7 +18,7 @@
 
 
 # Avoid Password Flooding
-if($_SESSION['attempts'] > 10 ){
+if(isset($_SESSION['attempts']) && $_SESSION['attempts'] > 10 ){
 	if($_POST){
 		echo 'Too Many Attempts, Please Try Later'; exit;
 	}
@@ -83,7 +83,7 @@ if(!$Gbl['IsWriteable']){
 
 # USER VARILABLES
 //print_r($_SESSION); exit;
-		if($_SESSION['username']){
+		if(!empty($_SESSION['username'])){
 			$sql = "SELECT * FROM ".$db_prefix."users WHERE user_email = '".mysql_real_escape_string($_SESSION['username'])."' AND user_password = '".md5($_SESSION['password'])."'";
 			$dbResult = mysql_query($sql, $db);
 			if($UserData = mysql_fetch_array($dbResult, MYSQL_ASSOC)){
@@ -102,8 +102,19 @@ if(!$Gbl['IsWriteable']){
 			$LoginCheck = false;
 
 		}
-		
-switch($_GET['p']){
+
+if(isset($_GET['p']))
+{
+	$p = $_GET['p'];
+}
+else
+{
+	$p = $Gbl['DefaultPage'];
+	// @todo fixme!
+	$_GET['p'] = $Gbl['DefaultPage'];
+}
+
+switch($p){
 	case 'wallpapers':
 		if($_GET['i']){
 			$sql = "SELECT * FROM ".$db_prefix."category WHERE category_url = '".mysql_real_escape_string($_GET['i'])."'";
@@ -161,11 +172,9 @@ switch($_GET['p']){
 		}	break;
 	
 	default:
-		if(!$_GET['p']){
-			$_GET['p'] = $Gbl['DefaultPage'];
-		}
-		if($_GET['p']){
-			$sql = "SELECT * FROM ".$db_prefix."pages WHERE page_url = '".mysql_real_escape_string($_GET['p'])."'";
+		
+		if($p){
+			$sql = "SELECT * FROM ".$db_prefix."pages WHERE page_url = '".mysql_real_escape_string($p)."'";
 			$dbResult = mysql_query($sql, $db);
 			if(!$Pg = mysql_fetch_array($dbResult, MYSQL_ASSOC)){
 				echo 'Error 43: No page Found'; exit;
@@ -178,4 +187,3 @@ switch($_GET['p']){
 		}
 	break;
 }
-?>
