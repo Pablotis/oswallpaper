@@ -1,0 +1,859 @@
+@charset "utf-8";
+/* CSS Document */
+/**
+*
+* @package wallpaperscript_beta
+* @copyright (c) 2009 wallpaperscript.org
+* In Collaboration with: www.webune.com & www.wallpaperama.com
+* @license http://opensource.org/licenses/gpl-license.php GNU Public License
+*
+*/
+body {
+	font-size: 11px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color:#f9f9f9;
+}
+
+.mbox{
+	border:1px solid #656565;
+	margin:0 auto;
+	background-color:#FFF;
+	width: 984px;
+}
+.mboxi{margin:11px}
+.ct, .ct .cl, .cb, .cb .cl{
+	display:block;
+	font-size:0;
+	line-height:0;
+	margin:0;
+	height:4px;
+	position:relative;
+	background-color: #FFFFFF;
+}
+.ct, .cb{
+	width:100%;
+	right:-1px;
+	background-color: #FFFFFF;
+}
+.ct .cl, .cb .cl{width:4px;left:-2px}
+.cb {background:url(images/lower-right.gif) no-repeat scroll right bottom; bottom:-1px}
+.cb .cl {background:url(images/lower-left.gif) no-repeat scroll left bottom;}
+.ct {background:url(images/upper-right.gif) no-repeat scroll right top; top:-1px}
+.ct .cl {background:url(images/upper-left.gif) no-repeat scroll left top;}
+
+.AdHeader{
+	text-align: center;
+	clear: both;
+	padding: 10px;
+}
+.SiteLogo{
+	float: left;
+	height: 50px;
+	width: 138px;
+	background-image: url(images/site-logo.gif);
+}
+.MenuTopLinkSec{
+	float: right;
+}
+.MenuTopLinkHello{
+	float: left;
+	font-weight: bold;
+	margin-right: 3px;
+}
+.MenuTopLinkUpload{
+	float: left;
+	font-weight: bold;
+	color: #09F;
+	margin-right: 5px;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #666;
+	padding-right: 5px;
+}
+a.MenuTopLinkUploadLink{
+	
+}
+a.MenuTopLinkUploadLink:hover{
+	
+}
+.MenuTopLinkUserName{
+	float: left;
+	font-weight: bold;
+	color: #09F;
+	margin-right: 5px;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #666;
+	padding-right: 5px;
+}
+a.MenuTopLinkUserNameLink{
+	font-weight: bold;
+	color: #F00;
+	text-decoration: none;
+}
+a.MenuTopLinkUserNameLink:hover{
+	color: #0F0;
+	text-decoration: underline;
+}
+.MenuTopLinkLogout{
+	float: left;
+}
+.MenuTopLinkLogin{
+	float: left;
+	color: #09F;
+	margin-right: 5px;
+	padding-right: 5px;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #999;
+}
+a.MenuTopLinkLoginLink{
+	font-weight: bold;
+	color: #09F;
+	text-decoration: underline;
+}
+a.MenuTopLinkLoginLink:hover{
+	color: #F00;
+}
+.MenuTopLinkRegister{
+	float: left;	
+}
+a.MenuTopLinkRegisterLink{
+	font-weight: bold;
+	color: #F60;
+	text-decoration: underline;
+}
+a.MenuTopLinkRegisterLink:hover{
+	color: #F00;
+}
+
+
+
+.MenuTopLink{
+	float: left;
+	margin-right: 5px;
+}
+.SiteTitleTop{
+	font-size: 18px;
+	font-weight: bold;
+	float: left;
+	margin-left: 15px;	
+}
+
+.LeftBox{
+	border:1px solid #656565;
+	background-color:#F8F8F8;
+	width: 165px;
+	float:left;
+	margin-bottom: 10px;
+	
+}
+.LeftBoxi{
+	margin:11px;
+}
+.RightBox{
+	border:1px solid #656565;
+	background-color:#F8F8F8;
+	width: 142px;
+	float:left;
+	margin-bottom: 10px;
+	
+	
+}
+.RightBoxi{
+	margin:11px;
+}
+.ContentBox{
+	border:1px solid #656565;
+	background-color:#FFF;
+	width: 628px;
+	height:100%;
+	float:left;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	
+}
+.ContentBoxi{
+	margin:0 auto;
+}
+.CatHeader{
+	font-size: 12px;
+	font-weight: bold;
+	color: #900;
+	text-align: center;
+	margin-bottom: 10px;	
+}
+.CatName{
+	margin: 3px;
+	text-transform: capitalize;
+}
+a.CatNameLink{
+	font-weight: bold;
+	color: #000;	
+}
+a.CatNameLink:hover{
+	font-weight: bold;
+	color: #F00;
+}
+
+
+
+.FooterBox{
+	border:1px solid #656565;
+	background-color:#F8F8F8;
+	clear:both;
+}
+.FooterBoxi{
+	margin:10px
+}
+.Footer{
+	text-align: center;	
+}
+
+.Banner120x600{
+	
+}
+
+/*  WALLPAPERS */
+.WallpaperIconSec{
+	float:left;
+	border: 1px solid #666;
+	background-color: #F7F7F7;
+	margin: 10px;
+	height:155px;
+	padding:7px;
+}
+
+.WallpaperIcon{
+	border: 1px solid #000;
+	padding:1px;
+	
+}
+.WallpaperIconName{
+	text-align: center;
+	width:160px;
+	margin-top: 3px;
+	text-transform: capitalize;
+}
+.WallpaperIconLink{
+	
+}
+
+.WallpaperThumbSec{
+	float:left;
+	height:259px;
+	width: 325px;
+	margin-left: 10px;
+}
+
+.WallpaperThumb{
+	border: 1px solid #000;
+	width: 160px;
+}
+.WallpaperThumbName{
+	text-align: left;
+	width:175px;
+	margin-top: 3px;
+	text-transform: capitalize;
+	font-size: 16px;
+	font-weight: bold;
+	color: #06F;
+}
+
+
+.WallpaperAd2{
+	float:right;
+	margin-right: 10px;
+}
+.CatPageNumbs{
+	clear:left;
+	text-align: center;
+	margin: 5px;
+}
+.CategoryBox{
+	padding: 3px;	
+}
+.WallpaperSize{
+	clear: both;
+	text-align: center;
+	padding: 20px;
+	
+}
+.WallpaperSizeButton{
+	color: #FFF;
+	background-color: #C33;
+	border: 1px solid #F60;
+	margin-right: 7px;
+	margin-left: 7px;
+}
+a.WallpaperSizeLink{
+	color: #000;
+	padding: 4px;
+	height: 35px;
+	width: 200px;
+	margin-right: 10px;
+	border: 1px solid #FC0;
+	background-color: #FFC;
+	text-decoration: none;
+}
+a.WallpaperSizeLink:hover{
+	border: 1px solid #FF0;
+	text-decoration: underline;
+	background-color: #FC0;
+}
+.WallpaperComments{
+	float:left;
+}
+.WallpaperShare{
+	clear:both;
+	margin-top: 10px;
+}
+.WallpaperReplies{
+	float:right;
+	width: 270px;
+	height:350px;
+	padding: 5px;
+	overflow: scroll;
+}
+
+.CommentsName{
+	font-size: 10px;
+	color: #06F;
+	text-decoration: underline;
+
+}
+.CommentsTime{
+	font-size: 10px;
+	font-style: italic;
+	color: #F90;
+
+}
+.CommentsDetails{
+	color: #333;
+	margin-top: 5px;
+	margin-bottom: 5px;
+
+}
+.WallpaperCommentsTitle{
+	font-size: 16px;
+	font-weight: bold;
+	color: #F90;
+	margin-bottom: 5px;
+}
+
+.reCAPTCHA{
+	
+}
+.LoginForm{
+	background-color:#FFF;
+	width: 284px;
+	padding: 10px;
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+	border-top-width: 20px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #656565;
+	border-right-color: #656565;
+	border-bottom-color: #656565;
+	border-left-color: #656565;
+}
+.LoginError{
+	font-weight: bold;
+	color: #F00;
+	text-align: center;
+	margin: 5px;
+}
+
+.LoginFormMsg{
+	width:200px;
+	padding: 10px;
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+}
+.LoginFormForgot{
+	float:left;
+}
+.LoginFormRegister{
+	float:left;
+	margin-left: 25px;
+}
+
+
+.RegisterForm{
+	background-color:#FFF;
+	width: 284px;
+	padding: 10px;
+	margin-right: auto;
+	margin-left: auto;
+	border: 1px solid #CCC;
+}
+.RegisterError{
+	font-weight: bold;
+	color: #F00;
+	margin: 5px;
+}
+.RegisterUsernameForm{
+	margin-top: 5px;	
+}
+.RegisterUsernameField{
+	
+}
+.RegisterEmailForm{
+	margin-top: 5px;	
+}
+.RegisterEmailField{
+	
+}
+.RegisterPasswordForm{
+	margin-top: 5px;	
+}
+.RegisterPasswordField{
+	
+}
+.RegisterPasswordReenterForm{
+	margin-top: 5px;	
+}
+.RegisterPasswordReenterField{
+	
+}
+.RegisterSubmitButton{
+	margin: 10px;
+}
+.RegisterFormMsgEmail{
+	margin: 5px;
+	color: #F00;
+}
+.RegisterFormMsg{
+	margin: 5px;
+	font-weight: bold;
+}
+.ForgotForm{
+	background-color:#FFF;
+	width: 284px;
+	padding: 10px;
+	margin-right: auto;
+	margin-left: auto;
+	border: 1px solid #CCC;	
+}
+.ForgotError{
+	font-weight: bold;
+	color: #F00;
+	margin: 5px;	
+}
+.ForgotUsername{
+	
+}
+.ForgotUsernameField{
+	
+}
+.ForgotSubmit{
+	margin: 10px;	
+}
+
+
+.ResetForm{
+	background-color:#FFF;
+	width: 284px;
+	padding: 10px;
+	margin-right: auto;
+	margin-left: auto;
+	border: 1px solid #CCC;	
+}
+.ResetError{
+	font-weight: bold;
+	color: #F00;
+	margin: 5px;	
+}
+
+.ResetSubmit{
+	margin: 10px;	
+}
+.AdminWallpaperCategoryName{
+	clear: both;
+	padding: 5px;
+	float: left;
+	width: 100px;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #CCC;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #CCC;
+	margin-left: 5px;
+}
+
+.AdminWallpaperName{
+	padding: 5px;
+	float: left;
+	width: 350px;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #CCC;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #CCC;
+	
+}
+.AdminWallpaperCatNames{
+	font-size: 24px;
+	font-weight: bold;
+	color: #F60;
+	margin: 10px;
+	text-align: center;
+}
+.LinkSec{
+	clear:left;
+	padding: 10px;
+}
+.LinkTitle{
+	float: left;
+}
+.LinkDescription{
+	clear: left;
+	
+}
+
+a.LinkUrl{
+	font-size: 12px;
+	font-weight: bold;
+	color: #F30;
+	text-decoration: underline;
+}
+a.LinkUrl:hover{
+		
+}
+.LinkSecAddLink{
+	text-align: center;
+	margin: 15px;
+}
+a.PaginationPrev{
+	background-color: #FFC;
+	margin: 5px;
+	border: 1px solid #F30;
+	padding: 5px;
+	text-decoration: none;
+}
+a.PaginationPrev:hover{
+	background-color: #C00;
+	margin: 5px;
+	border: 1px solid #F30;
+	padding: 5px;
+	color: #FFF;
+}
+
+
+a.PaginationNext{
+	background-color: #FFC;
+	margin: 5px;
+	border: 1px solid #F30;
+	padding: 5px;
+	text-decoration: none;
+}
+a.PaginationNext:hover{
+	background-color: #C00;
+	margin: 5px;
+	border: 1px solid #F30;
+	padding: 5px;
+	color: #FFF;
+}
+
+a.PaginationFirst{
+	background-color: #FFC;
+	margin: 5px;
+	border: 1px solid #F30;
+	padding: 5px;
+	text-decoration: none;
+}
+a.PaginationFirst:hover{
+	background-color: #C00;
+	margin: 5px;
+	border: 1px solid #F30;
+	padding: 5px;
+	color: #FFF;
+}
+
+a.PaginationLast{
+	background-color: #FFC;
+	margin: 5px;
+	border: 1px solid #F30;
+	padding: 5px;
+	text-decoration: none;
+}
+a.PaginationLast:hover{
+	background-color: #C00;
+	margin: 5px;
+	border: 1px solid #F30;
+	padding: 5px;
+	color: #FFF;
+}
+
+.PaginationSelected{
+	margin: 5px;
+	border: 1px solid #CCC;
+	padding: 5px;
+	text-decoration: none;
+	font-weight: bold;
+	color: #F00;
+}
+
+
+a.PaginationPgNum{
+	background-color: #FFC;
+	margin: 5px;
+	border: 1px solid #F30;
+	padding: 5px;
+	text-decoration: none;
+}
+a.PaginationPgNum:hover{
+	background-color: #C00;
+	margin: 5px;
+	border: 1px solid #F30;
+	padding: 5px;
+	color: #FFF;
+}
+
+.LeftBoxFriends{
+	text-transform: capitalize;
+	margin-top: 15px;
+	margin-bottom: 10px;
+}
+
+.FriendsHeader{
+	font-size: 12px;
+	font-weight: bold;
+	color: #900;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.FriendsLinks{
+	
+}
+
+.FriendsUrl{
+	
+}
+
+a.FriendsLink{
+	font-weight: bold;
+	color: #F90;
+}
+a.FriendsLink:hover{
+	font-weight: bold;
+	color: #F00;
+}
+.FriendsMore{
+	margin-top: 15px;
+}
+
+a.FriendsMoreLink{
+	
+}
+.FriendsAdd{
+	margin-top: 5px;
+}
+
+a.FriendsAddLink{
+	
+}
+
+.AddLinkForm{
+	width: 284px;
+	padding: 10px;
+	margin-right: auto;
+	margin-left: auto;	
+}
+.AddLinkError{
+	font-weight: bold;
+	color: #F00;
+	margin-bottom: 15px;
+}
+
+
+.AddLinkUsernameForm{
+	
+}
+
+.AddLinkUsernameField{
+	
+}
+
+
+.AddLinkEmailForm{
+	margin-top: 10px;	
+}
+
+.AddLinkEmailField{
+	
+}
+
+.AddLinkTitleForm{
+	margin-top: 10px;
+}
+.AddLinkTitleField{
+	
+}
+
+.AddLinkUrlForm{
+	margin-top: 10px;
+}
+.AddLinkUrlField{
+	
+}
+.AddLinkDescriptionForm{
+	margin-top: 10px;
+}
+.AddLinkDescriptionField{
+	
+}
+.AddLinkAgree{
+	float:left;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.AddLinkAgreeCheck{
+	float:left;
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+}
+.AddLinkSubmitButton{
+	clear:left;
+	margin-top: 10px
+	
+}
+
+.AddLinkFormMsg{
+	
+}
+.AddLinkFormMsgEmail{
+	margin-top: 10px
+}
+
+
+
+
+
+
+.UploadForm{
+	padding: 5px;
+	width: 200px;
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+}
+.UploadError{
+	font-weight: bold;
+	color: #F00;	
+}
+.UploadNameForm{
+	margin-top: 10px
+}
+.UploadNameField{
+}
+.UploadCatForm{
+	margin-top: 10px
+}
+.UploadCatField{
+}
+.UploadSizeForm{
+	margin-top: 10px
+}
+.UploadSizeField{
+}
+
+.UploadFileForm{
+	margin-top: 10px
+}
+.UploadFileField{
+}
+.UploadSubmitField{
+	margin-top: 10px
+}
+
+.IndexNewest{
+	font-size: 24px;
+	color: #F90;
+	padding: 3px;
+}
+
+.IndexNewestSec{
+	clear:left;
+}
+.IndexPopular{
+	font-size: 24px;
+	color: #F90;
+	padding: 3px;
+}
+.IndexPopularSec{
+	clear:left;
+}
+
+.IndexCommentsSec{
+	clear:left;
+	padding: 5px;
+	overflow: scroll;
+	width: 600px;
+}
+
+.IndexCommentsLatest{
+	font-size: 24px;
+	color: #F90;
+	padding: 3px;	
+}
+.IndexCommentsName{
+	float:left;
+	font-weight: bold;
+	color: #036;
+	font-size: 12px;
+	text-decoration: underline;
+	margin-top: 10px;
+}
+.IndexCommentsTime{
+	float:left;
+	font-style: italic;
+	color: #06C;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+.IndexCommentsText{
+	clear:left;
+	color: #666;
+	padding: 5px;
+}
+
+
+
+.Alt1{
+	background-color: #EEE;	
+}
+.Alt2{
+	background-color: #FFF;	
+}
+.Loading{
+	background-image: url(images/loading.gif);
+	height: 240px;
+	width: 320px;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+
+
+
+
+
+
