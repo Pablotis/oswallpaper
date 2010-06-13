@@ -1,0 +1,13 @@
+RewriteEngine On
+
+#PAGES
+
+RewriteRule ^([^/]*)/$ index.php?p=$1 [L]
+
+# CATEGORY
+RewriteRule ^([^/]*)/([^/]*)/$ index.php?p=$1&i=$2 [L]
+# CATEGORY PAGES
+RewriteRule ^([^/]*)/([^/]*)/([^/]*)/$ index.php?p=$1&i=$2&pg=$3 [L]
+
+
+
