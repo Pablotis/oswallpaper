@@ -54,6 +54,7 @@ function WallpaperImage($sizeid,$wallpaper_url){
 
 function WallpaperSizes($wallpaper_url) {
    global $db,$db_prefix;
+	$sizehtml = "";
     $sql = "SELECT l.sizeid,l.width,l.height FROM ".$db_prefix."size_match s, ".$db_prefix."size l WHERE s.sizeid = l.sizeid and s.wallpaper_url = '$wallpaper_url' ORDER BY l.sizeid ASC";
     $result = mysql_query($sql ,$db);
     if ($myrow = mysql_fetch_array($result)) {
@@ -211,9 +212,9 @@ function CommentsForm($error,$recaptcha){
 
     ?>
     </div>
-    <div class="WallpaperCommentsName">Name:</div><div class="WallpaperCommentsNameField"><input name="name" type="text" size="25" maxlength="25" value="<?php echo $_POST['name']; ?>"/></div>
-    <div class="WallpaperCommentsEmail">Email:</div><div class="WallpaperCommentsEmailField"><input name="email" type="text" size="25" maxlength="35"  value="<?php echo $_POST['email']; ?>"/></div>
-    <div class="WallpaperCommentsComments">Comments:</div><div class="WallpaperCommentsCommentsField"><textarea name="comments" cols="37" rows="5"><?php echo htmlspecialchars($_POST['comments']); ?></textarea></div>
+    <div class="WallpaperCommentsName">Name:</div><div class="WallpaperCommentsNameField"><input name="name" type="text" size="25" maxlength="25" value="<?php echo ((isset($_POST['name'])) ? $_POST['name'] : ""); ?>"/></div>
+    <div class="WallpaperCommentsEmail">Email:</div><div class="WallpaperCommentsEmailField"><input name="email" type="text" size="25" maxlength="35"  value="<?php echo ((isset($_POST['email'])) ? $_POST['email'] : ""); ?>"/></div>
+    <div class="WallpaperCommentsComments">Comments:</div><div class="WallpaperCommentsCommentsField"><textarea name="comments" cols="37" rows="5"><?php echo ((isset($_POST['comments'])) ? htmlspecialchars($_POST['comments']) : ""); ?></textarea></div>
     <div class="reCAPTCHA">
  <?php
 
