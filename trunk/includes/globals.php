@@ -129,7 +129,7 @@ switch($p){
 			$Pg['page_title'] = 'Wallpaper Categories';	
 		}
 	$Pg['page_type'] = 2;
-	if($_GET['pg']){
+	if(!empty($_GET['pg'])){
 		$Pg['page_title'] = $Pg['page_title'].' Page '.$_GET['pg'];
 	}
 	if($Pg['category_description']){
@@ -152,6 +152,10 @@ switch($p){
 			$dbResult = mysql_query($sql, $db);
 			if($Pg = mysql_fetch_array($dbResult, MYSQL_ASSOC)){
 				$Pg['page_title'] = $Pg['wallpaper_name'].' Wallpaper';
+				
+				// count views
+				mysql_query("UPDATE `" . $db_prefix . "wallpaper` SET `wallpaper_views` = `wallpaper_views` + 1 WHERE `wallpaper_id` = " . $Pg['wallpaper_id'], $db);
+				
 			}else{
 				echo 'Error 11: No wallpaper Found'; exit;
 			}
