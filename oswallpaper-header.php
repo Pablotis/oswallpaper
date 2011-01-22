@@ -17,9 +17,9 @@ include_once('includes/globals.php');
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title><?php echo ucwords ($Pg['page_title'].' - '.$Gbl['SiteName']); ?></title>
-<meta name="description" content="<?php echo $Pg['page_description']; ?>" />
-<meta name="keywords" content="<?php echo $Pg['page_keywords']; ?>" />
+<title><?php echo htmlentities(ucwords ($Pg['page_title'].' - '.$Gbl['SiteName']), ENT_QUOTES, "UTF-8"); ?></title>
+<meta name="description" content="<?php echo htmlentities($Pg['page_description'], ENT_QUOTES, "UTF-8"); ?>" />
+<meta name="keywords" content="<?php echo htmlentities($Pg['page_keywords'], ENT_QUOTES, "UTF-8"); ?>" />
 <link href="<?php echo $Gbl['SiteUrl']; ?>theme/<?php echo $Gbl['Theme']; ?>/<?php echo $Gbl['Theme']; ?>.css" rel="stylesheet" type="text/css" />
 </head>
 
